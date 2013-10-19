@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" class="js inlinesvg svg" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+    {% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+    {% endblock %}
+
+    <title> Django/Scrapy {% block title %}{% endblock %}</title>
+    
+    {% block css %}
+    <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap.min.css" />
+	  <link rel="stylesheet" href="{{STATIC_URL}}css/bootstrap-responsive.min.css" />
+    {% endblock %}
+
+    {% block js_head %}
+    <script type="text/javascript" src="{{ STATIC_URL}}js/jquery-1.7.2.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+    {% block content %}
+    {% endblock %}
+    </div>
+    {% block js_body %}
+	<script src="{{ STATIC_URL}}js/bootstrap.min.js"></script>
+    {% endblock %}
+</body>
+</html>

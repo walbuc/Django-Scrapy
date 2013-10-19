@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Banda</th>
+        <th>Titulo</th>
+        <th></td>
+    </tr>
+    {% for album in albums %}
+    <tr>
+        <td>{{album.position}}</td>
+        <td><a class="btn btn-danger" href="{{album.album.band.get_absolute_url}}">{{album.album.band}}</a></td>
+        <td><a class="btn btn-success" href="{{album.album.get_absolute_url}}">{{album.album.name}}</a></td>
+        <td>
+            <div class="btn-group">
+            <a class="btn btn-primary" href="{{album.site_url}}">Link en Rolling Stone</a>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

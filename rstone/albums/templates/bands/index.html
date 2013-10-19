@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="span12">
+        <div class="page-header">
+            <h1>Bands</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% for band in bands %}
+    <div class="span4 band">
+        <h2><a href="{{band.get_absolute_url}}">{{band.name}}</a></h2>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

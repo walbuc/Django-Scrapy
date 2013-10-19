@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th></th>
+    </tr>
+    {% for artist in artists %}
+    <tr>
+        <td>{{artist.position}}</td>
+        <td>
+            <a class="btn btn-success" href="{{artist.artist.get_absolute_url}}">{{artist.artist.name}}</a>
+        </td>
+        <td>
+            <a class="btn btn-primary" href="{{artist.site_url}}">Link en Rolling Stone</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

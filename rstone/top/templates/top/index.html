@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="span12">
+        <div class="page-header">
+            <h1>Rankings</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% for ranking in rankings %}
+    <div class="span4 ranking">
+        <h2><a href="{{ranking.get_absolute_url}}">{{ranking.title}}</a></h2>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
