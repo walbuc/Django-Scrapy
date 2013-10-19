@@ -1,4 +1,6 @@
-# An example of how to use Django ORM to store in a db obtained data by a Scrapy Spider an then exopse the data through an REST API
+# Django and Scrapy
+
+An example of how to use Django ORM to store in a db obtained data by a Scrapy Spider an then exopse the data through an REST API
 
 As an example, i set up this project to scrap all over rolling stone lists/rankings and store them in a relational db with proper data models
  
